@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevelopXamarinTest.Common.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace DevelopXamarinTest.Domain.Models
         }
 
         public System.Data.Entity.DbSet<DevelopXamarinTest.Common.Models.Product> Products { get; set; }
+        
     }
 }
