@@ -10,12 +10,12 @@ namespace DevelopXamarinTest.Domain.Models
 {
     public class DataContext : DbContext
     {
-        public DataContext() : base("DefaultConnection")
+        public DataContext() : base("DevelopXamarinTestDB")
         {
 
         }
 
-        public System.Data.Entity.DbSet<DevelopXamarinTest.Common.Models.Product> Products { get; set; }
-        
+        public DbSet<Product> Products { get; set; }
+
     }
 }
