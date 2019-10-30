@@ -192,6 +192,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -269,6 +270,10 @@
     <ProjectReference Include="..\DevelopXamarinTest.Domain\DevelopXamarinTest.Domain.csproj">
       <Project>{59119114-45fa-4fa9-ba01-d168d3070ce9}</Project>
       <Name>DevelopXamarinTest.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevelopXamarinTestAPI\DevelopXamarinTestAPI.csproj">
+      <Project>{2DC000CE-CA9F-4A40-A24E-BBBC591A4184}</Project>
+      <Name>DevelopXamarinTestAPI</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
