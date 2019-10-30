@@ -1,5 +1,4 @@
-﻿using DevelopXamarinTest.View;
-using System;
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +11,7 @@ namespace DevelopXamarinTest
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ProductsPage());
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
