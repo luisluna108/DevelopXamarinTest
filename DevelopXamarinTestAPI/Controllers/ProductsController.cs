@@ -39,6 +39,7 @@ namespace DevelopXamarinTestAPI.Controllers
 
         // PUT: api/Products/5
         [ResponseType(typeof(void))]
+        [HttpPut]
         public async Task<IHttpActionResult> PutProduct(int id, Product product)
         {
             if (!ModelState.IsValid)

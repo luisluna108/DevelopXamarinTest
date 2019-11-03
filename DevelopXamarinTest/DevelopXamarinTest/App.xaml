@@ -7,7 +7,10 @@
         <ResourceDictionary>
             <!--Locator-->
             <infra:InstanceLocator x:Key="Locator"/>
-            
+            <!--Parameters-->
+            <x:String x:Key="UrlAPI">http://10.0.2.2</x:String>
+            <x:String x:Key="Api">/api</x:String>
+            <x:String x:Key="ControllerProducts">/Products</x:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
