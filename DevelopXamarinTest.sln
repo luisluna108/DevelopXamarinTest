@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopXamarinTest.Android"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopXamarinTest.iOS", "DevelopXamarinTest\DevelopXamarinTest.iOS\DevelopXamarinTest.iOS.csproj", "{932DC99E-17F4-4639-926E-F7AEC95C431C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopXamarinTest", "DevelopXamarinTest\DevelopXamarinTest\DevelopXamarinTest.csproj", "{DFBD7FA1-B33F-457B-A480-44F665D25BFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevelopXamarinTest", "DevelopXamarinTest\DevelopXamarinTest\DevelopXamarinTest.csproj", "{DFBD7FA1-B33F-457B-A480-44F665D25BFF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopXamarinTestBackend", "DevelopXamarinTestBackend\DevelopXamarinTestBackend.csproj", "{D431F282-EE6C-4F44-829A-C031A1FBD942}"
 EndProject
@@ -458,6 +458,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_ConfirmAddLanguageFile = True
+		RESX_AutoCreateNewLanguageFiles = True
 		SolutionGuid = {8B091171-81E1-4805-989A-710B3F2FCE40}
 	EndGlobalSection
 EndGlobal

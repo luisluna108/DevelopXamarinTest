@@ -132,4 +132,25 @@
   <data name="ProductsLbl" xml:space="preserve">
     <value>Products</value>
   </data>
+  <data name="AddProductLbl" xml:space="preserve">
+    <value>Add Product</value>
+  </data>
+  <data name="DescriptionLbl" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DescriptionPlaceholderTxt" xml:space="preserve">
+    <value>Enter Product Description</value>
+  </data>
+  <data name="PriceLbl" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="PricePlaceholderTxt" xml:space="preserve">
+    <value>Enter Price Description</value>
+  </data>
+  <data name="RemarksLbl" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="SaveBtn" xml:space="preserve">
+    <value>Save</value>
+  </data>
 </root>

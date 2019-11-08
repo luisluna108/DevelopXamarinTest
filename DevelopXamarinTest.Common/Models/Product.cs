@@ -28,6 +28,19 @@ namespace DevelopXamarinTest.Common.Models
         [DataType(DataType.Date)]
         public DateTime PublishdOn { get; set; }
 
+        public string ImageFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.ImagePath))
+                    return "noproduct";
+
+                var urlPage = $"http://10.0.2.2/{this.ImagePath.Substring(2)}";
+                return urlPage;
+            }
+
+        }
+
         public override string ToString()
         {
             return this.Description;

@@ -18,10 +18,15 @@
 
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\DevelopXamarinTest.Common\DevelopXamarinTest.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="View\AddProductPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

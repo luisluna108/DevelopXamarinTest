@@ -5,6 +5,12 @@
              x:Class="DevelopXamarinTest.View.ProductsPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="{i18n:Translate ProductsLbl}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Icon="ic_action_add_circle"
+            Command="{Binding AddProductCommand}">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout
             BindingContext="{Binding Products}"
@@ -20,19 +26,33 @@
                         <ViewCell>
                             <Grid>
                                 <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label 
+                                <Image
                                     Grid.Column="0"
+                                    Source="{Binding ImageFullPath}"
+                                    WidthRequest="100">
+                                </Image>
+                                <StackLayout
+                                    Grid.Column="1"
+                                    VerticalOptions="Center">
+                                    <Label 
                                     Text="{Binding Description}"
                                     FontAttributes="Bold">
-                                </Label>
+                                    </Label>
+                                    <Label
+                                        Text="{Binding Remarks}">
+                                        
+                                    </Label>
+                                </StackLayout>
 
                                 <Label 
-                                    Grid.Column="1"
+                                    Grid.Column="2"
                                     Text="{Binding Price, StringFormat='{0:C2}'}"
-                                    HorizontalOptions="End">
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Center">
                                 </Label>
                             </Grid>
                         </ViewCell>

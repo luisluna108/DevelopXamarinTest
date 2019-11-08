@@ -36,5 +36,33 @@ namespace DevelopXamarinTest.Helpers
         {
             get { return Resource.ProductsLbl; }
         }
+        public static string AddProductLbl
+        {
+            get { return Resource.AddProductLbl; }
+        }
+        public static string DescriptionLbl
+        {
+            get { return Resource.DescriptionLbl; }
+        }
+        public static string DescriptionPlaceholderTxt
+        {
+            get { return Resource.DescriptionPlaceholderTxt; }
+        }
+        public static string PriceLbl
+        {
+            get { return Resource.PriceLbl; }
+        }
+        public static string PricePlaceholderTxt
+        {
+            get { return Resource.PricePlaceholderTxt; }
+        }
+        public static string RemarksLbl
+        {
+            get { return Resource.RemarksLbl; }
+        }
+        public static string SaveBtn
+        {
+            get { return Resource.SaveBtn; }
+        }
     }
 }

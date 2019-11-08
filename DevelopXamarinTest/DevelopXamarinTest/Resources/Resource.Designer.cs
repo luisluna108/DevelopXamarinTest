@@ -106,5 +106,75 @@ namespace DevelopXamarinTest.Resources {
                 return ResourceManager.GetString("ProductsLbl", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
+        /// </summary>
+        public static string AddProductLbl
+        {
+            get
+            {
+                return ResourceManager.GetString("AddProductLbl", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
+        /// </summary>
+        public static string DescriptionLbl
+        {
+            get
+            {
+                return ResourceManager.GetString("DescriptionLbl", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
+        /// </summary>
+        public static string DescriptionPlaceholderTxt
+        {
+            get
+            {
+                return ResourceManager.GetString("DescriptionPlaceholderTxt", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
+        /// </summary>
+        public static string PriceLbl
+        {
+            get
+            {
+                return ResourceManager.GetString("PriceLbl", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
+        /// </summary>
+        public static string PricePlaceholderTxt
+        {
+            get
+            {
+                return ResourceManager.GetString("PricePlaceholderTxt", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
+        /// </summary>
+        public static string RemarksLbl
+        {
+            get
+            {
+                return ResourceManager.GetString("RemarksLbl", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
+        /// </summary>
+        public static string SaveBtn
+        {
+            get
+            {
+                return ResourceManager.GetString("SaveBtn", resourceCulture);
+            }
+        }
     }
 }

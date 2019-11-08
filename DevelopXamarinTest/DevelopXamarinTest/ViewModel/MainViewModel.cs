@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Windows.Input;
+using DevelopXamarinTest.View;
+using GalaSoft.MvvmLight.Command;
+using Xamarin.Forms;
 
 namespace DevelopXamarinTest.ViewModel
 {
@@ -10,6 +11,23 @@ namespace DevelopXamarinTest.ViewModel
 
         public MainViewModel() {
             this.Products = new ProductsViewModel();
+        }
+
+        public ICommand AddProductCommand
+        {
+            get
+            {
+                return new RelayCommand(GoToAddProduct);
+            }
+
+        }
+
+        public AddProductViewModel AddProduct { get; set; }
+
+        private async void GoToAddProduct()
+        {
+            this.AddProduct = new AddProductViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new AddProductPage());
         }
     }
 }
