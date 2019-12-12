@@ -6,16 +6,19 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace DevelopXamarinTest.ViewModel
 {
-    public class AddProductViewModel : BaseViewModel
+    public class EditProductViewModel : BaseViewModel
     {
-        #region Attritutes
-        private MediaFile file;
+        #region Attributes
+        private Product _product;
+
+        private MediaFile _file;
 
         private ImageSource _imageSource;
 
@@ -27,11 +30,11 @@ namespace DevelopXamarinTest.ViewModel
         #endregion
 
         #region Properties
-        public string Description { get; set; }
-
-        public string Price { get; set; }
-
-        public string Remarks { get; set; }
+        public Product Product
+        {
+            get { return this._product; }
+            set { this.SetValue(ref this._product, value); }
+        }
 
         public bool IsRunning
         {
@@ -50,15 +53,15 @@ namespace DevelopXamarinTest.ViewModel
             get { return _imageSource; }
             set { this.SetValue(ref this._imageSource, value); }
         }
-
         #endregion
 
         #region Constructors
-        public AddProductViewModel()
+        public EditProductViewModel(Product product)
         {
+            this._product = product;
             this.IsEnabled = true;
             this._apiServices = new ApiServices();
-            this.ImageSource = "noproduct";
+            this.ImageSource = product.ImageFullPath;
         }
         #endregion
 
@@ -88,7 +91,7 @@ namespace DevelopXamarinTest.ViewModel
 
         private async void Save()
         {
-            if (string.IsNullOrEmpty(this.Description))
+            if (string.IsNullOrEmpty(this.Product.Description))
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.ErrorLbl,
@@ -97,18 +100,7 @@ namespace DevelopXamarinTest.ViewModel
                 return;
             }
 
-            if (string.IsNullOrEmpty(this.Price))
-            {
-                await Application.Current.MainPage.DisplayAlert(
-                    Languages.ErrorLbl,
-                    Languages.PriceErrorLbl,
-                    Languages.AcceptBtn);
-                return;
-            }
-
-            var price = decimal.Parse(this.Price);
-
-            if (price < 0)
+            if (this.Product.Price < 0)
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.ErrorLbl,
@@ -133,21 +125,16 @@ namespace DevelopXamarinTest.ViewModel
             }
 
             byte[] imageArray = null;
-            if (this.file != null)
-                imageArray = FileHelper.ReadFully(this.file.GetStream());
-
-            var product = new Product()
+            if (this._file != null)
             {
-                Description = this.Description,
-                Price = price,
-                Remarks = this.Remarks,
-                ImageArray = imageArray
-            };
+                imageArray = FileHelper.ReadFully(this._file.GetStream());
+                this.Product.ImageArray = imageArray;
+            }
 
             var url = Application.Current.Resources["UrlAPI"].ToString();
             var api = Application.Current.Resources["Api"].ToString();
             var controller = Application.Current.Resources["ControllerProducts"].ToString();
-            var response = await this._apiServices.Post(url, api, controller, product);
+            var response = await this._apiServices.Put(url, api, controller, this.Product, this.Product.ProductId);
 
             if (!response.IsSuccess)
             {
@@ -158,8 +145,7 @@ namespace DevelopXamarinTest.ViewModel
                 return;
             }
             //UserDialogs.Instance.HideLoading();
-            this.IsRunning = false;
-            this.IsEnabled = true;
+
 
             var newProduct = (Product)response.Result;
 
@@ -170,8 +156,15 @@ namespace DevelopXamarinTest.ViewModel
 
             var productsViewModel = ProductsViewModel.GetInstance();
 
+            var oldProduct = productsViewModel.MyProducts.Where(p => p.ProductId == this.Product.ProductId).FirstOrDefault();
+            if (oldProduct != null)
+                productsViewModel.MyProducts.Remove(oldProduct);
+
             productsViewModel.MyProducts.Add(newProduct);
             productsViewModel.RefreshList();
+
+            this.IsRunning = false;
+            this.IsEnabled = true;
 
             await Application.Current.MainPage.DisplayAlert(Languages.SaveLbl, Languages.DescriptionSaveLbl, Languages.AcceptBtn);
             await Application.Current.MainPage.Navigation.PopAsync();
@@ -190,13 +183,13 @@ namespace DevelopXamarinTest.ViewModel
 
             if (source == Languages.CancelBtn)
             {
-                this.file = null;
+                this._file = null;
                 return;
             }
 
             if (source == Languages.NewPictureLbl)
             {
-                this.file = await CrossMedia.Current.TakePhotoAsync(
+                this._file = await CrossMedia.Current.TakePhotoAsync(
                     new StoreCameraMediaOptions
                     {
                         Directory = "Sample",
@@ -206,14 +199,14 @@ namespace DevelopXamarinTest.ViewModel
             }
             else
             {
-                this.file = await CrossMedia.Current.PickPhotoAsync();
+                this._file = await CrossMedia.Current.PickPhotoAsync();
             }
 
-            if (this.file != null)
+            if (this._file != null)
             {
                 this.ImageSource = ImageSource.FromStream(() =>
                 {
-                    var stream = this.file.GetStream();
+                    var stream = this._file.GetStream();
                     return stream;
                 });
             }

@@ -24,6 +24,13 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="{i18n:Translate EditLbl}"
+                                          Command="{Binding EditProductCommand}"/>
+                                <MenuItem Text="{i18n:Translate DeleteLbl}"
+                                          Command="{Binding DeleteProductCommand}"
+                                          IsDestructive="True"/>
+                            </ViewCell.ContextActions>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -40,7 +47,8 @@
                                     VerticalOptions="Center">
                                     <Label 
                                     Text="{Binding Description}"
-                                    FontAttributes="Bold">
+                                    FontAttributes="Bold"
+                                        FontSize="Micro">
                                     </Label>
                                     <Label
                                         Text="{Binding Remarks}">
@@ -52,7 +60,8 @@
                                     Grid.Column="2"
                                     Text="{Binding Price, StringFormat='{0:C2}'}"
                                     HorizontalOptions="End"
-                                    VerticalOptions="Center">
+                                    VerticalOptions="Center"
+                                    FontSize="Micro">
                                 </Label>
                             </Grid>
                         </ViewCell>

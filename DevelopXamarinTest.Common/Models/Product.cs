@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DevelopXamarinTest.Common.Models
 {
@@ -28,6 +29,9 @@ namespace DevelopXamarinTest.Common.Models
         [DataType(DataType.Date)]
         public DateTime PublishdOn { get; set; }
 
+        [NotMapped]
+        public byte[] ImageArray { get; set; }
+
         public string ImageFullPath
         {
             get
@@ -35,7 +39,7 @@ namespace DevelopXamarinTest.Common.Models
                 if (string.IsNullOrEmpty(this.ImagePath))
                     return "noproduct";
 
-                var urlPage = $"http://10.0.2.2/{this.ImagePath.Substring(2)}";
+                var urlPage = $"http://192.168.1.4/{this.ImagePath.Substring(2)}";
                 return urlPage;
             }
 
@@ -45,5 +49,8 @@ namespace DevelopXamarinTest.Common.Models
         {
             return this.Description;
         }
+
+        public string ValidationSet { get; set; }
+
     }
 }

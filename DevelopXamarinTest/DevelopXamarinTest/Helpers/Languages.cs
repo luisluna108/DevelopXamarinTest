@@ -64,5 +64,80 @@ namespace DevelopXamarinTest.Helpers
         {
             get { return Resource.SaveBtn; }
         }
+        public static string ChanceImageLbl
+        {
+            get { return Resource.ChanceImageLbl; }
+        }
+        public static string DescriptionErrorLbl
+        {
+            get { return Resource.DescriptionErrorLbl; }
+        }
+        public static string PriceErrorLbl
+        {
+            get { return Resource.PriceErrorLbl; }
+        }
+        public static string DescriptionSaveLbl
+        {
+            get { return Resource.DescriptionSaveLbl; }
+        }
+        public static string SaveLbl
+        {
+            get { return Resource.SaveLbl; }
+        }
+        public static string ImageSourceLbl
+        {
+            get { return Resource.ImageSourceLbl; }
+        }
+        public static string FromGalleryLbl
+        {
+            get { return Resource.FromGalleryLbl; }
+        }
+        public static string NewPictureLbl
+        {
+            get { return Resource.NewPictureLbl; }
+        }
+        public static string CancelBtn
+        {
+            get { return Resource.CancelBtn; }
+        }
+        public static string EditLbl
+        {
+            get { return Resource.EditLbl; }
+        }
+        public static string DeleteLbl
+        {
+            get { return Resource.DeleteLbl; }
+        }
+        public static string DeleteConfirmLbl
+        {
+            get { return Resource.DeleteConfirmLbl; }
+        }
+        public static string YesLbl
+        {
+            get { return Resource.YesLbl; }
+        }
+        public static string NoLbl
+        {
+            get { return Resource.NoLbl; }
+        }
+        public static string ConfirmLbl
+        {
+            get { return Resource.ConfirmLbl; }
+        }
+
+        public static string LoadingLbl
+        {
+            get { return Resource.LoadingLbl; }
+        }
+
+        public static string EditProductLbl
+        {
+            get { return Resource.EditProductLbl; }
+        }
+
+        public static string IsAvailableLbl
+        {
+            get { return Resource.IsAvailableLbl; }
+        }
     }
 }

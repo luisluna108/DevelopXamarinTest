@@ -22,7 +22,7 @@ namespace DevelopXamarinTest.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resource {
+    internal class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DevelopXamarinTest.Resources {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DevelopXamarinTest.Resources.Resource", typeof(Resource).Assembly);
@@ -51,7 +51,7 @@ namespace DevelopXamarinTest.Resources {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,117 +63,270 @@ namespace DevelopXamarinTest.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Accept.
         /// </summary>
-        public static string AcceptBtn {
+        internal static string AcceptBtn {
             get {
                 return ResourceManager.GetString("AcceptBtn", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Error.
+        ///   Busca una cadena traducida similar a Product Add.
         /// </summary>
-        public static string ErrorLbl {
+        internal static string AddProductLbl {
+            get {
+                return ResourceManager.GetString("AddProductLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cancel.
+        /// </summary>
+        internal static string CancelBtn {
+            get {
+                return ResourceManager.GetString("CancelBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Touch the image to chance it.
+        /// </summary>
+        internal static string ChanceImageLbl {
+            get {
+                return ResourceManager.GetString("ChanceImageLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Confirm.
+        /// </summary>
+        internal static string ConfirmLbl {
+            get {
+                return ResourceManager.GetString("ConfirmLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Are you sure to delete this?.
+        /// </summary>
+        internal static string DeleteConfirmLbl {
+            get {
+                return ResourceManager.GetString("DeleteConfirmLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Delete.
+        /// </summary>
+        internal static string DeleteLbl {
+            get {
+                return ResourceManager.GetString("DeleteLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a You must enter a description.
+        /// </summary>
+        internal static string DescriptionErrorLbl {
+            get {
+                return ResourceManager.GetString("DescriptionErrorLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Description.
+        /// </summary>
+        internal static string DescriptionLbl {
+            get {
+                return ResourceManager.GetString("DescriptionLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter the product description!.
+        /// </summary>
+        internal static string DescriptionPlaceholderTxt {
+            get {
+                return ResourceManager.GetString("DescriptionPlaceholderTxt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a The changes were saved successfully.
+        /// </summary>
+        internal static string DescriptionSaveLbl {
+            get {
+                return ResourceManager.GetString("DescriptionSaveLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Edit.
+        /// </summary>
+        internal static string EditLbl {
+            get {
+                return ResourceManager.GetString("EditLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Edit Product.
+        /// </summary>
+        internal static string EditProductLbl {
+            get {
+                return ResourceManager.GetString("EditProductLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Error!.
+        /// </summary>
+        internal static string ErrorLbl {
             get {
                 return ResourceManager.GetString("ErrorLbl", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a No internet connection.
+        ///   Busca una cadena traducida similar a From gallery.
         /// </summary>
-        public static string NoInternetLbl {
+        internal static string FromGalleryLbl {
+            get {
+                return ResourceManager.GetString("FromGalleryLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Where do you take the picture?.
+        /// </summary>
+        internal static string ImageSourceLbl {
+            get {
+                return ResourceManager.GetString("ImageSourceLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Is Available.
+        /// </summary>
+        internal static string IsAvailableLbl {
+            get {
+                return ResourceManager.GetString("IsAvailableLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Loading.
+        /// </summary>
+        internal static string LoadingLbl {
+            get {
+                return ResourceManager.GetString("LoadingLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Take a new picture.
+        /// </summary>
+        internal static string NewPictureLbl {
+            get {
+                return ResourceManager.GetString("NewPictureLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No internet connection available!.
+        /// </summary>
+        internal static string NoInternetLbl {
             get {
                 return ResourceManager.GetString("NoInternetLbl", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
+        ///   Busca una cadena traducida similar a No.
         /// </summary>
-        public static string TurnOnInternetLbl {
+        internal static string NoLbl {
+            get {
+                return ResourceManager.GetString("NoLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a You must enter a price greaten than zero.
+        /// </summary>
+        internal static string PriceErrorLbl {
+            get {
+                return ResourceManager.GetString("PriceErrorLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Price.
+        /// </summary>
+        internal static string PriceLbl {
+            get {
+                return ResourceManager.GetString("PriceLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter the price description!.
+        /// </summary>
+        internal static string PricePlaceholderTxt {
+            get {
+                return ResourceManager.GetString("PricePlaceholderTxt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Products.
+        /// </summary>
+        internal static string ProductsLbl {
+            get {
+                return ResourceManager.GetString("ProductsLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Remarks.
+        /// </summary>
+        internal static string RemarksLbl {
+            get {
+                return ResourceManager.GetString("RemarksLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save!.
+        /// </summary>
+        internal static string SaveBtn {
+            get {
+                return ResourceManager.GetString("SaveBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Success.
+        /// </summary>
+        internal static string SaveLbl {
+            get {
+                return ResourceManager.GetString("SaveLbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Please enable internet parameters!.
+        /// </summary>
+        internal static string TurnOnInternetLbl {
             get {
                 return ResourceManager.GetString("TurnOnInternetLbl", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
+        ///   Busca una cadena traducida similar a Yes.
         /// </summary>
-        public static string ProductsLbl
-        {
-            get
-            {
-                return ResourceManager.GetString("ProductsLbl", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
-        /// </summary>
-        public static string AddProductLbl
-        {
-            get
-            {
-                return ResourceManager.GetString("AddProductLbl", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
-        /// </summary>
-        public static string DescriptionLbl
-        {
-            get
-            {
-                return ResourceManager.GetString("DescriptionLbl", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
-        /// </summary>
-        public static string DescriptionPlaceholderTxt
-        {
-            get
-            {
-                return ResourceManager.GetString("DescriptionPlaceholderTxt", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
-        /// </summary>
-        public static string PriceLbl
-        {
-            get
-            {
-                return ResourceManager.GetString("PriceLbl", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
-        /// </summary>
-        public static string PricePlaceholderTxt
-        {
-            get
-            {
-                return ResourceManager.GetString("PricePlaceholderTxt", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
-        /// </summary>
-        public static string RemarksLbl
-        {
-            get
-            {
-                return ResourceManager.GetString("RemarksLbl", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Busca una cadena traducida similar a Pleace turn on your internet setting.
-        /// </summary>
-        public static string SaveBtn
-        {
-            get
-            {
-                return ResourceManager.GetString("SaveBtn", resourceCulture);
+        internal static string YesLbl {
+            get {
+                return ResourceManager.GetString("YesLbl", resourceCulture);
             }
         }
     }

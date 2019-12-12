@@ -117,40 +117,94 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AcceptBtn" xml:space="preserve">
-    <value>Aceptar</value>
+  <data name="CancelBtn" xml:space="preserve">
+    <value>&amp;Cancelar</value>
   </data>
-  <data name="ErrorLbl" xml:space="preserve">
-    <value>Error</value>
+  <data name="ChanceImageLbl" xml:space="preserve">
+    <value>¡Toca la imagen para darle la oportunidad!</value>
   </data>
-  <data name="TurnOnInternetLbl" xml:space="preserve">
-    <value>Por favor active los parametros de internet</value>
-  </data>
-  <data name="NoInternetLbl" xml:space="preserve">
-    <value>No hay conexión a internet</value>
-  </data>
-  <data name="ProductsLbl" xml:space="preserve">
-    <value>Productos</value>
-  </data>
-  <data name="AddProductLbl" xml:space="preserve">
-    <value>Agregar producto</value>
+  <data name="DescriptionErrorLbl" xml:space="preserve">
+    <value>Debe escribir una descripción</value>
   </data>
   <data name="DescriptionLbl" xml:space="preserve">
     <value>Descripción:</value>
   </data>
   <data name="DescriptionPlaceholderTxt" xml:space="preserve">
-    <value>Introduzca la descripción del producto</value>
+    <value>Escriba la descripción del producto</value>
+  </data>
+  <data name="DescriptionSaveLbl" xml:space="preserve">
+    <value>Los cambios se guardaron correctamente</value>
+  </data>
+  <data name="ErrorLbl" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="FromGalleryLbl" xml:space="preserve">
+    <value>De la galería</value>
+  </data>
+  <data name="ImageSourceLbl" xml:space="preserve">
+    <value>¿Dónde tomas la foto?</value>
+  </data>
+  <data name="NewPictureLbl" xml:space="preserve">
+    <value>Tomar una nueva imagen</value>
+  </data>
+  <data name="NoInternetLbl" xml:space="preserve">
+    <value>No hay conexión a internet!</value>
+  </data>
+  <data name="PriceErrorLbl" xml:space="preserve">
+    <value>¡Debe ingresar un precio mayor que cero!</value>
   </data>
   <data name="PriceLbl" xml:space="preserve">
     <value>Precio</value>
   </data>
   <data name="PricePlaceholderTxt" xml:space="preserve">
-    <value>Introduzca la descripción del precio!</value>
+    <value>Ingrese la descripción del precio !!</value>
+  </data>
+  <data name="ProductsLbl" xml:space="preserve">
+    <value>Productos</value>
   </data>
   <data name="RemarksLbl" xml:space="preserve">
-    <value>Comentarios:</value>
+    <value>Notas:</value>
   </data>
   <data name="SaveBtn" xml:space="preserve">
     <value>Guardar</value>
+  </data>
+  <data name="SaveLbl" xml:space="preserve">
+    <value>Éxito</value>
+  </data>
+  <data name="TurnOnInternetLbl" xml:space="preserve">
+    <value>Por favor, active los parámetros de internet !!</value>
+  </data>
+  <data name="AcceptBtn" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="AddProductLbl" xml:space="preserve">
+    <value>Añadir producto</value>
+  </data>
+  <data name="DeleteLbl" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="EditLbl" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="DeleteConfirmLbl" xml:space="preserve">
+    <value>Está seguro de eliminar esto?</value>
+  </data>
+  <data name="YesLbl" xml:space="preserve">
+    <value>Sí</value>
+  </data>
+  <data name="NoLbl" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ConfirmLbl" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="LoadingLbl" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="EditProductLbl" xml:space="preserve">
+    <value>Editar Producto</value>
+  </data>
+  <data name="IsAvailableLbl" xml:space="preserve">
+    <value>Está habilitado.</value>
   </data>
 </root>
